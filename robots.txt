@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Allow: *.html
+Disallow: /assets/css/
+Disallow: /assets/js/
+
+# Sitemap
+Sitemap: sitemap.xml
+
+# Specific rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
