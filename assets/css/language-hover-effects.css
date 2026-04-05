@@ -1,0 +1,135 @@
+/* ============================================
+   STICKY HEADER WITH SMOOTH SHADOW
+   ============================================ */
+
+#header {
+	-moz-transition: background-color 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+	-webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+	-ms-transition: background-color 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+	transition: background-color 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+	background-color: rgba(53, 56, 73, 0.95);
+	height: 3.5em;
+	left: 0;
+	line-height: 3.5em;
+	padding: 0 1.25em;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 10000;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0);
+}
+
+/* Header shadow on scroll/hover */
+#header:hover {
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   LANGUAGE SWITCHER HOVER EFFECTS
+   ============================================ */
+
+/* Language links in header nav */
+#header nav a:not([href="#menu"]) {
+	-moz-transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+	-webkit-transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+	-ms-transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+	transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+	position: relative;
+	border: 0;
+	text-decoration: none;
+	padding: 0 0.8em;
+}
+
+/* Hover effect: Color change + subtle glow + scale */
+#header nav a:not([href="#menu"]):hover {
+	color: #ffffff;
+	text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 
+	             0 0 20px rgba(76, 92, 150, 0.4);
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+/* Active/Current language indicator */
+#header nav a:not([href="#menu"]).active,
+#header nav a:not([href="#menu"]).current {
+	color: #ffffff;
+	text-shadow: 0 0 15px rgba(76, 92, 150, 0.8);
+	border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+	padding-bottom: 0.5em;
+	line-height: 2.8em;
+}
+
+/* Smooth transition on active */
+#header nav a:not([href="#menu"]).active:hover,
+#header nav a:not([href="#menu"]).current:hover {
+	-moz-transform: scale(1.15);
+	-webkit-transform: scale(1.15);
+	-ms-transform: scale(1.15);
+	transform: scale(1.15);
+	border-bottom-color: rgba(76, 92, 150, 1);
+}
+
+/* Pulse animation on click/active */
+@-webkit-keyframes flag-pulse {
+	0%, 100% { -webkit-transform: scale(1.1); }
+	50% { -webkit-transform: scale(1.2); }
+}
+
+@-moz-keyframes flag-pulse {
+	0%, 100% { -moz-transform: scale(1.1); }
+	50% { -moz-transform: scale(1.2); }
+}
+
+@keyframes flag-pulse {
+	0%, 100% { transform: scale(1.1); }
+	50% { transform: scale(1.2); }
+}
+
+#header nav a:not([href="#menu"]):active {
+	-webkit-animation: flag-pulse 0.4s ease-in-out;
+	-moz-animation: flag-pulse 0.4s ease-in-out;
+	animation: flag-pulse 0.4s ease-in-out;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media screen and (max-width: 736px) {
+
+	#header {
+		height: 2.75em;
+		line-height: 2.75em;
+	}
+
+	#header nav a:not([href="#menu"]) {
+		padding: 0 0.6em;
+		font-size: 0.9em;
+	}
+
+	#header nav a:not([href="#menu"]):hover {
+		-moz-transform: scale(1.08);
+		-webkit-transform: scale(1.08);
+		-ms-transform: scale(1.08);
+		transform: scale(1.08);
+	}
+
+}
+
+@media screen and (max-width: 480px) {
+
+	#header nav a:not([href="#menu"]) {
+		padding: 0 0.4em;
+		font-size: 0.85em;
+	}
+
+	#header nav a:not([href="#menu"]):hover {
+		-moz-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		transform: scale(1.05);
+	}
+
+}
