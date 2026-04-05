@@ -1,262 +1,65 @@
 /* ============================================
-   STICKY HEADER WITH SMOOTH SHADOW
+   FALLING ENGINEER ICONS - MENU SECTION ONLY
    ============================================ */
 
-#header {
-	-moz-transition: background-color 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
-	-webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
-	-ms-transition: background-color 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
-	transition: background-color 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
-	background-color: rgba(53, 56, 73, 0.95);
-	height: 3.5em;
-	left: 0;
-	line-height: 3.5em;
-	padding: 0 1.25em;
-	position: sticky;
-	top: 0;
-	width: 100%;
-	z-index: 10000;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0);
-}
-
-/* Header shadow on scroll/hover */
-#header:hover {
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* ============================================
-   LANGUAGE SWITCHER HOVER EFFECTS (CLEAN)
-   ============================================ */
-
-/* Language links in header nav */
-#header nav a:not([href="#menu"]) {
-	-moz-transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
-	-webkit-transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
-	-ms-transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
-	transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+/* Menu links styling */
+#menu .links li a {
 	position: relative;
-	border: 0;
-	text-decoration: none;
-	padding: 0 0.8em;
-	display: inline-block;
 }
-
-/* Hover effect: Color change + subtle glow + scale */
-#header nav a:not([href="#menu"]):hover {
-	color: #ffffff;
-	text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 
-	             0 0 20px rgba(76, 92, 150, 0.4);
-	-moz-transform: scale(1.1);
-	-webkit-transform: scale(1.1);
-	-ms-transform: scale(1.1);
-	transform: scale(1.1);
-}
-
-/* Active/Current language indicator */
-#header nav a:not([href="#menu"]).active,
-#header nav a:not([href="#menu"]).current {
-	color: #ffffff;
-	text-shadow: 0 0 15px rgba(76, 92, 150, 0.8);
-	border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-	padding-bottom: 0.5em;
-	line-height: 2.8em;
-}
-
-/* Smooth transition on active */
-#header nav a:not([href="#menu"]).active:hover,
-#header nav a:not([href="#menu"]).current:hover {
-	-moz-transform: scale(1.15);
-	-webkit-transform: scale(1.15);
-	-ms-transform: scale(1.15);
-	transform: scale(1.15);
-	border-bottom-color: rgba(76, 92, 150, 1);
-}
-
-/* ============================================
-   FALLING ENGINEER ICONS - MENU SECTION
-   ============================================ */
 
 /* Falling icons keyframes */
-@-webkit-keyframes falling-engineer-icons {
-	0% {
-		opacity: 1;
-		-webkit-transform: translateY(-30px) scale(1) rotateZ(0deg);
-	}
-	10% {
-		opacity: 1;
-	}
-	90% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-		-webkit-transform: translateY(200px) scale(0.3) rotateZ(360deg);
-	}
-}
-
-@-moz-keyframes falling-engineer-icons {
-	0% {
-		opacity: 1;
-		-moz-transform: translateY(-30px) scale(1) rotateZ(0deg);
-	}
-	10% {
-		opacity: 1;
-	}
-	90% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-		-moz-transform: translateY(200px) scale(0.3) rotateZ(360deg);
-	}
-}
-
 @keyframes falling-engineer-icons {
 	0% {
 		opacity: 1;
-		transform: translateY(-30px) scale(1) rotateZ(0deg);
-	}
-	10% {
-		opacity: 1;
-	}
-	90% {
-		opacity: 1;
+		transform: translateY(-40px) scale(1.2) rotateZ(0deg);
 	}
 	100% {
 		opacity: 0;
-		transform: translateY(200px) scale(0.3) rotateZ(360deg);
+		transform: translateY(300px) scale(0.5) rotateZ(360deg);
 	}
 }
 
 /* Menu links - add falling icons on hover */
-#menu .links li a {
-	position: relative;
-	overflow: visible;
-}
-
 #menu .links li a:hover::before {
-	content: '📚 📖 🧠 ✏️ ⚙️ 💡 🔬 🔧 📚 📖 🧠 ✏️ ⚙️ 💡 🔬 🔧';
+	content: '📚 📖 🧠 ✏️ ⚙️ 💡 🔬 🔧 📚 📖 🧠 ✏️ ⚙️ 💡';
 	position: fixed;
-	top: -30px;
-	left: 5%;
-	right: 5%;
-	height: 300px;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 400px;
 	pointer-events: none;
-	font-size: 2.5em;
+	font-size: 3em;
 	display: flex;
 	flex-wrap: wrap;
-	align-content: flex-start;
+	align-items: flex-start;
 	justify-content: space-around;
-	z-index: 5000;
-	word-spacing: 1em;
-	line-height: 1.5em;
-	-webkit-animation: falling-engineer-icons 3s ease-in forwards;
-	-moz-animation: falling-engineer-icons 3s ease-in forwards;
-	animation: falling-engineer-icons 3s ease-in forwards;
+	padding-top: 20px;
+	z-index: 9999;
+	line-height: 1.2;
+	word-spacing: 2em;
+	animation: falling-engineer-icons 2.5s ease-in forwards;
 }
 
-/* Staggered animation for multiple hovers */
+/* Staggered animations */
+#menu .links li:nth-child(1) a:hover::before {
+	animation-delay: 0s;
+}
 #menu .links li:nth-child(2) a:hover::before {
-	-webkit-animation-delay: 0.1s;
-	-moz-animation-delay: 0.1s;
+	animation-delay: 0.05s;
+}
+#menu .links li:nth-child(3) a:hover::before {
 	animation-delay: 0.1s;
 }
-
-#menu .links li:nth-child(3) a:hover::before {
-	-webkit-animation-delay: 0.2s;
-	-moz-animation-delay: 0.2s;
+#menu .links li:nth-child(4) a:hover::before {
+	animation-delay: 0.15s;
+}
+#menu .links li:nth-child(5) a:hover::before {
 	animation-delay: 0.2s;
 }
-
-#menu .links li:nth-child(4) a:hover::before {
-	-webkit-animation-delay: 0.3s;
-	-moz-animation-delay: 0.3s;
-	animation-delay: 0.3s;
-}
-
-#menu .links li:nth-child(5) a:hover::before {
-	-webkit-animation-delay: 0.4s;
-	-moz-animation-delay: 0.4s;
-	animation-delay: 0.4s;
-}
-
 #menu .links li:nth-child(6) a:hover::before {
-	-webkit-animation-delay: 0.5s;
-	-moz-animation-delay: 0.5s;
-	animation-delay: 0.5s;
+	animation-delay: 0.25s;
 }
-
 #menu .links li:nth-child(7) a:hover::before {
-	-webkit-animation-delay: 0.6s;
-	-moz-animation-delay: 0.6s;
-	animation-delay: 0.6s;
-}
-
-/* ============================================
-   MENU LINK HOVER EFFECTS
-   ============================================ */
-
-#menu .links li a {
-	-moz-transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
-	-webkit-transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
-	-ms-transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
-	transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
-}
-
-#menu .links li a:hover {
-	-moz-transform: translateX(10px);
-	-webkit-transform: translateX(10px);
-	-ms-transform: translateX(10px);
-	transform: translateX(10px);
-}
-
-/* ============================================
-   RESPONSIVE ADJUSTMENTS
-   ============================================ */
-
-@media screen and (max-width: 736px) {
-
-	#header {
-		height: 2.75em;
-		line-height: 2.75em;
-	}
-
-	#header nav a:not([href="#menu"]) {
-		padding: 0 0.6em;
-		font-size: 0.9em;
-	}
-
-	#header nav a:not([href="#menu"]):hover {
-		-moz-transform: scale(1.08);
-		-webkit-transform: scale(1.08);
-		-ms-transform: scale(1.08);
-		transform: scale(1.08);
-	}
-
-	#menu .links li a:hover::before {
-		font-size: 2em;
-		height: 250px;
-	}
-
-}
-
-@media screen and (max-width: 480px) {
-
-	#header nav a:not([href="#menu"]) {
-		padding: 0 0.4em;
-		font-size: 0.85em;
-	}
-
-	#header nav a:not([href="#menu"]):hover {
-		-moz-transform: scale(1.05);
-		-webkit-transform: scale(1.05);
-		-ms-transform: scale(1.05);
-		transform: scale(1.05);
-	}
-
-	#menu .links li a:hover::before {
-		font-size: 1.5em;
-		height: 200px;
-	}
-
+	animation-delay: 0.3s;
 }
