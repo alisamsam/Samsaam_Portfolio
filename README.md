@@ -47,8 +47,8 @@ Visit the live website: [Coming Soon]
 ## 📧 Contact
 
 - Email: alisamsam72@gmail.com
-- LinkedIn: [Your LinkedIn]
-- GitHub: [Your GitHub]
+- LinkedIn: https://www.linkedin.com/in/samsaam-ali-baig-usmb/?skipRedirect=true
+- Website: https://samsaam-portfolio.vercel.app/#
 
 ## 📄 License
 
