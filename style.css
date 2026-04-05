@@ -42,6 +42,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -53,7 +54,8 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .nav-menu a {
@@ -61,6 +63,7 @@ body {
     color: var(--dark);
     font-weight: 500;
     transition: color 0.3s;
+    font-size: 0.95em;
 }
 
 .nav-menu a:hover,
@@ -101,6 +104,37 @@ body {
 
 .cta-btn:hover {
     transform: translateY(-3px);
+}
+
+/* PROFILE SECTION */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    border-left: 4px solid var(--primary);
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-intro h3 {
+    font-size: 1.8em;
+    color: var(--dark);
+    margin-bottom: 5px;
+}
+
+.profile-intro p {
+    margin: 5px 0;
 }
 
 /* SECTIONS */
@@ -213,6 +247,7 @@ section h2 {
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: transform 0.3s, box-shadow 0.3s;
+    padding: 0;
 }
 
 .project-card:hover,
@@ -300,6 +335,7 @@ section h2 {
 .detail-section {
     background: var(--white);
     min-height: 70vh;
+    padding: 40px 20px;
 }
 
 .back-btn {
@@ -418,19 +454,6 @@ section h2 {
     color: #999 !important;
 }
 
-.media-instructions {
-    margin-top: 50px;
-}
-
-.media-instructions ol {
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-
-.media-instructions li {
-    margin: 8px 0;
-}
-
 /* FOOTER */
 .footer {
     background: var(--dark);
@@ -457,7 +480,13 @@ section h2 {
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .nav-menu {
-        gap: 15px;
+        gap: 10px;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
     }
 
     .hero-content h2 {
@@ -472,5 +501,9 @@ section h2 {
     .experiences-grid,
     .gallery-grid {
         grid-template-columns: 1fr;
+    }
+
+    .nav-menu {
+        font-size: 0.9em;
     }
 }
