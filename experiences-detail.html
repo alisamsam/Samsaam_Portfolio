@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience Details - Samsaam Ali Baig</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Samsaam Ali Baig</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experiences.html">Work Experience</a></li>
+                <li><a href="social-skills.html">Social Skills</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- EXPERIENCE DETAILS -->
+    <section class="detail-section">
+        <div class="container">
+            <a href="experiences.html" class="back-btn">← Back to Experiences</a>
+            
+            <div id="experience-content" class="detail-content">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Samsaam Ali Baig. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/alisamsam" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/samsaam-ali-baig" target="_blank">LinkedIn</a>
+                <a href="mailto:alisamsam72@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // EXPERIENCE DATA
+        const experiences = {
+            1: {
+                title: "Environmental Data & Sustainability Intern",
+                company: "Aga Khan Schools",
+                duration: "Jul - Dec 2025",
+                location: "Global",
+                description: `
+                    <h3>Role Overview</h3>
+                    <p>Led sustainability initiatives across 100+ schools by developing comprehensive green standards dashboards and environmental monitoring systems.</p>
+                    
+                    <h3>Key Achievements</h3>
+                    <ul>
+                        <li>Designed and implemented interactive sustainability dashboards</li>
+                        <li>Developed comprehensive green project guidelines</li>
+                        <li>Conducted environmental data analysis across 10+ countries</li>
+                        <li>Generated $750,000+ in cost savings through optimization</li>
+                    </ul>
+                    
+                    <h3>Responsibilities</h3>
+                    <ul>
+                        <li>Data-driven sustainability approach development</li>
+                        <li>Dashboard design and implementation</li>
+                        <li>Environmental metric tracking</li>
+                        <li>Stakeholder reporting and analysis</li>
+                    </ul>
+                    
+                    <h3>Impact</h3>
+                    <p>Successfully implemented monitoring system affecting 50,000+ students and tracking 450,000+ kWh of renewable energy.</p>
+                `
+            },
+            2: {
+                title: "Climate & Environment Conference Intern",
+                company: "Aga Khan University",
+                duration: "2024-2025",
+                location: "Pakistan",
+                description: `
+                    <h3>Role Overview</h3>
+                    <p>Coordinated and managed major climate and environment conferences, bringing together stakeholders to discuss sustainable solutions.</p>
+                    
+                    <h3>Key Achievements</h3>
+                    <ul>
+                        <li>Successfully organized multiple conferences</li>
+                        <li>Developed presentations on climate initiatives</li>
+                        <li>Facilitated knowledge sharing among professionals</li>
+                        <li>Built stakeholder networks and partnerships</li>
+                    </ul>
+                    
+                    <h3>Responsibilities</h3>
+                    <ul>
+                        <li>Conference planning and coordination</li>
+                        <li>Presentation development</li>
+                        <li>Stakeholder engagement and networking</li>
+                        <li>Event management and logistics</li>
+                    </ul>
+                    
+                    <h3>Skills Developed</h3>
+                    <p>Event management, public speaking, sustainability communication, stakeholder relations</p>
+                `
+            },
+            3: {
+                title: "Sustainable Buildings & Energy Audit Intern",
+                company: "Aga Khan Agency for Habitat (AKAH)",
+                duration: "2023-2024",
+                location: "Gilgit, Pakistan",
+                description: `
+                    <h3>Role Overview</h3>
+                    <p>Conducted comprehensive energy audits and sustainable building assessments across multiple facilities. Implemented energy efficiency measures and prepared technical reports.</p>
+                    
+                    <h3>Key Achievements</h3>
+                    <ul>
+                        <li>Completed energy audits for 20+ facilities</li>
+                        <li>Identified energy-saving opportunities</li>
+                        <li>Prepared detailed technical recommendations</li>
+                        <li>Implemented sustainability improvements</li>
+                    </ul>
+                    
+                    <h3>Technical Skills Applied</h3>
+                    <ul>
+                        <li>Energy consumption analysis</li>
+                        <li>Building assessment methodologies</li>
+                        <li>HVAC systems evaluation</li>
+                        <li>Renewable energy feasibility studies</li>
+                    </ul>
+                    
+                    <h3>Documentation</h3>
+                    <p>Created comprehensive technical reports with recommendations for sustainable building design and energy efficiency upgrades.</p>
+                `
+            },
+            4: {
+                title: "Research Assistant Intern",
+                company: "Academic Research",
+                duration: "2023",
+                location: "Research Lab",
+                description: `
+                    <h3>Role Overview</h3>
+                    <p>Engaged in cutting-edge research projects focusing on medical devices and sensor technologies. Contributed to healthcare technology innovations.</p>
+                    
+                    <h3>Research Focus</h3>
+                    <ul>
+                        <li>Medical device development</li>
+                        <li>Sensor technology research</li>
+                        <li>Healthcare innovation</li>
+                        <li>Biomedical engineering</li>
+                    </ul>
+                    
+                    <h3>Responsibilities</h3>
+                    <ul>
+                        <li>Experimental design and setup</li>
+                        <li>Data collection and analysis</li>
+                        <li>Literature review and research</li>
+                        <li>Technical documentation</li>
+                    </ul>
+                    
+                    <h3>Outcomes</h3>
+                    <p>Contributed to research publications and innovative solutions in healthcare technology field.</p>
+                `
+            },
+            5: {
+                title: "Manufacturing Internship",
+                company: "Pakistan Ordnance Factories (POF)",
+                duration: "2022",
+                location: "Islamabad, Pakistan",
+                description: `
+                    <h3>Role Overview</h3>
+                    <p>Gained hands-on experience in industrial manufacturing processes, quality control, and production management. Worked with advanced machinery and learned industrial protocols.</p>
+                    
+                    <h3>Key Achievements</h3>
+                    <ul>
+                        <li>Learned advanced manufacturing processes</li>
+                        <li>Participated in quality assurance</li>
+                        <li>Understood production line optimization</li>
+                        <li>Completed industrial safety training</li>
+                    </ul>
+                    
+                    <h3>Technical Exposure</h3>
+                    <ul>
+                        <li>CNC machining</li>
+                        <li>Quality control procedures</li>
+                        <li>Production management</li>
+                        <li>Safety protocols and compliance</li>
+                    </ul>
+                    
+                    <h3>Professional Development</h3>
+                    <p>Developed strong understanding of industrial manufacturing best practices and workplace safety standards.</p>
+                `
+            }
+        };
+
+        // Load experience details
+        function loadExperienceDetail() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const expId = urlParams.get('id') || 1;
+            const experience = experiences[expId];
+            
+            if (experience) {
+                document.getElementById('experience-content').innerHTML = `
+                    <h2>${experience.title}</h2>
+                    <div class="exp-header">
+                        <p class="company"><strong>Company:</strong> ${experience.company}</p>
+                        <p class="duration"><strong>Duration:</strong> ${experience.duration}</p>
+                        <p class="location"><strong>Location:</strong> ${experience.location}</p>
+                    </div>
+                    <div class="detail-body">${experience.description}</div>
+                    <a href="experiences.html" class="cta-btn" style="margin-top: 30px;">← Back to All Experiences</a>
+                `;
+                document.title = `${experience.title} - Samsaam Ali Baig`;
+            }
+        }
+
+        loadExperienceDetail();
+    </script>
+</body>
+</html>

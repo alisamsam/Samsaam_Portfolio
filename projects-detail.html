@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Samsaam Ali Baig</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Samsaam Ali Baig</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experiences.html">Work Experience</a></li>
+                <li><a href="social-skills.html">Social Skills</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PROJECT DETAILS -->
+    <section class="detail-section">
+        <div class="container">
+            <a href="projects.html" class="back-btn">← Back to Projects</a>
+            
+            <div id="project-content" class="detail-content">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Samsaam Ali Baig. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/alisamsam" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/samsaam-ali-baig" target="_blank">LinkedIn</a>
+                <a href="mailto:alisamsam72@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // PROJECT DATA
+        const projects = {
+            1: {
+                title: "🌍 Green Standards Dashboard",
+                subtitle: "Real-time monitoring system for 100+ schools across 10+ countries",
+                description: `
+                    <h3>📋 The Challenge</h3>
+                    <p>Aga Khan Schools network needed real-time tracking of sustainability metrics across 100+ geographically distributed schools in 10+ countries.</p>
+                    
+                    <h3>💡 The Solution</h3>
+                    <p>Built end-to-end web-based monitoring system featuring:</p>
+                    <ul>
+                        <li>Interactive Geospatial Map with Leaflet.js</li>
+                        <li>Real-time Analytics Dashboard with Chart.js</li>
+                        <li>8 Green Standards Compliance Tracking</li>
+                        <li>Multi-region Data Aggregation</li>
+                    </ul>
+                    
+                    <h3>📊 Impact Metrics</h3>
+                    <ul>
+                        <li>✅ 100+ Schools Deployed</li>
+                        <li>✅ 50,000+ Students Impacted</li>
+                        <li>✅ $750,000+ Cost Savings</li>
+                        <li>✅ 450,000+ kWh Renewable Energy Tracked</li>
+                        <li>✅ 225+ MT CO₂ Reduction</li>
+                    </ul>
+                    
+                    <h3>🛠️ Technology Stack</h3>
+                    <p><strong>Frontend:</strong> JavaScript, HTML5, CSS3</p>
+                    <p><strong>Visualization:</strong> Chart.js, Leaflet.js</p>
+                    <p><strong>Data:</strong> JSON, Real-time Sync</p>
+                `
+            },
+            2: {
+                title: "🦵 Biomechanical Ankle Analysis",
+                subtitle: "Research project analyzing postural control and ankle biomechanics",
+                description: `
+                    <h3>📚 Research Overview</h3>
+                    <p><strong>Title:</strong> Biomechanical and Neuromuscular Analysis of the Ankle in Postural Control</p>
+                    <p><strong>Team:</strong> Saher Alreqeb & Samsaam Ali Baig</p>
+                    <p><strong>Supervisor:</strong> Laurent Tabourot</p>
+                    
+                    <h3>🔬 Methodology</h3>
+                    <p><strong>Stream 1:</strong> Data Acquisition (Kistler Force Plate, EMG, ArUco)</p>
+                    <p><strong>Stream 2:</strong> Biomechanical Model (MATLAB Simulink, Spring-Damper)</p>
+                    
+                    <h3>📊 Results</h3>
+                    <p>Model validation success with 100% alignment on key parameters:</p>
+                    <ul>
+                        <li>✅ Sway Frequency Match (0.40Hz)</li>
+                        <li>✅ Underdamped Behavior Confirmed</li>
+                        <li>✅ Stability Condition Validated</li>
+                        <li>✅ 18+ Model Iterations</li>
+                    </ul>
+                    
+                    <h3>🛠️ Technology</h3>
+                    <p><strong>Simulation:</strong> MATLAB, Simulink, Simscape</p>
+                    <p><strong>Data:</strong> Python, PyQt5, OpenCV</p>
+                    <p><strong>Analysis:</strong> Signal Processing, Control Theory</p>
+                `
+            },
+            3: {
+                title: "🤖 AI + MCP Engineering Automation",
+                subtitle: "Claude API integration with Model Context Protocol for engineering tools",
+                description: `
+                    <h3>🎯 Project Vision</h3>
+                    <p>Build AI-powered automation system integrating Claude API with engineering tools (MATLAB, SolidWorks) through MCP servers.</p>
+                    
+                    <h3>🏗️ System Architecture</h3>
+                    <ul>
+                        <li><strong>Layer 1:</strong> Claude API - Natural language task processing</li>
+                        <li><strong>Layer 2:</strong> MCP Server (FastMCP) - Tool definitions</li>
+                        <li><strong>Layer 3:</strong> JSON-RPC Socket Layer - Messaging</li>
+                        <li><strong>Layer 4:</strong> Engineering Tools - MATLAB, SolidWorks</li>
+                    </ul>
+                    
+                    <h3>💡 Features</h3>
+                    <ul>
+                        <li>Natural language commands for engineering tasks</li>
+                        <li>Automated MATLAB simulations</li>
+                        <li>CAD model generation</li>
+                        <li>Error handling and validation</li>
+                    </ul>
+                    
+                    <h3>📋 Status</h3>
+                    <p><strong>Current Phase:</strong> Active Development</p>
+                    <p><strong>Next Steps:</strong> MATLAB integration, SolidWorks connector</p>
+                `
+            },
+            4: {
+                title: "🦾 ROS2 Autonomous Robot",
+                subtitle: "Team project with autonomous navigation and obstacle avoidance",
+                description: `
+                    <h3>🎯 Objectives</h3>
+                    <ul>
+                        <li>Autonomous navigation in unknown environments</li>
+                        <li>Real-time obstacle detection and avoidance</li>
+                        <li>SLAM implementation</li>
+                        <li>Multi-sensor fusion</li>
+                    </ul>
+                    
+                    <h3>👥 Team</h3>
+                    <p><strong>Size:</strong> 8 Members</p>
+                    <p><strong>Context:</strong> M2 Advanced Mechatronics</p>
+                    
+                    <h3>🛠️ Technology Stack</h3>
+                    <p><strong>Software:</strong> ROS 2, C++, Python, OpenCV</p>
+                    <p><strong>Simulation:</strong> Gazebo, Nav2</p>
+                    <p><strong>Design:</strong> SolidWorks, SLAM Toolbox</p>
+                    
+                    <h3>🚀 Key Features</h3>
+                    <ul>
+                        <li>Path planning using A* and Dijkstra</li>
+                        <li>Real-time SLAM with map generation</li>
+                        <li>Dynamic obstacle avoidance</li>
+                        <li>Multi-sensor data fusion</li>
+                    </ul>
+                `
+            },
+            5: {
+                title: "💊 Smart Pillbox IoT Device",
+                subtitle: "Connected healthcare solution with real-time alerts",
+                description: `
+                    <h3>🎯 Purpose</h3>
+                    <p>Connected medication management system with automated reminders and WhatsApp notifications.</p>
+                    
+                    <h3>✨ Key Features</h3>
+                    <ul>
+                        <li>Automated medication reminders</li>
+                        <li>Real-time WhatsApp notifications</li>
+                        <li>Medication compliance tracking</li>
+                        <li>Web dashboard for monitoring</li>
+                        <li>Emergency alerts for missed doses</li>
+                    </ul>
+                    
+                    <h3>🛠️ Technology Stack</h3>
+                    <p><strong>Hardware:</strong> ESP32 Microcontroller, WiFi/BLE</p>
+                    <p><strong>Firmware:</strong> Arduino IDE, MQTT Protocol</p>
+                    <p><strong>Backend:</strong> Python Flask, REST API</p>
+                    <p><strong>Integration:</strong> CallMeBot API, WhatsApp</p>
+                    
+                    <h3>💡 Healthcare Impact</h3>
+                    <ul>
+                        <li>Improves medication adherence in elderly care</li>
+                        <li>Reduces missed doses</li>
+                        <li>Enables family caregiving</li>
+                        <li>Scalable for smart home healthcare</li>
+                    </ul>
+                `
+            },
+            6: {
+                title: "⚙️ Advanced Control Systems",
+                subtitle: "Multiple control theory implementations and system modeling",
+                description: `
+                    <h3>📋 Projects Included</h3>
+                    <ul>
+                        <li><strong>PID Control:</strong> Proportional-Integral-Derivative controllers</li>
+                        <li><strong>State-Space:</strong> Modern control theory implementation</li>
+                        <li><strong>System Dynamics:</strong> Transfer functions and modeling</li>
+                        <li><strong>Simulation:</strong> MATLAB/Simulink implementations</li>
+                    </ul>
+                    
+                    <h3>🛠️ Technology</h3>
+                    <p><strong>Software:</strong> MATLAB, Simulink, Control System Toolbox</p>
+                    <p><strong>Theory:</strong> Classical and Modern Control, System Analysis</p>
+                    
+                    <h3>📊 Applications</h3>
+                    <ul>
+                        <li>Industrial process control</li>
+                        <li>Robot arm control</li>
+                        <li>Vehicle dynamics</li>
+                        <li>Power system stability</li>
+                    </ul>
+                    
+                    <h3>✅ Status</h3>
+                    <p>Complete - All projects successfully implemented and validated</p>
+                `
+            }
+        };
+
+        // Load project details
+        function loadProjectDetail() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get('id') || 1;
+            const project = projects[projectId];
+            
+            if (project) {
+                document.getElementById('project-content').innerHTML = `
+                    <h2>${project.title}</h2>
+                    <p class="subtitle">${project.subtitle}</p>
+                    <div class="detail-body">${project.description}</div>
+                    <a href="projects.html" class="cta-btn" style="margin-top: 30px;">← Back to All Projects</a>
+                `;
+                document.title = `${project.title} - Samsaam Ali Baig`;
+            }
+        }
+
+        loadProjectDetail();
+    </script>
+</body>
+</html>
