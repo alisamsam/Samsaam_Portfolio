@@ -47,179 +47,442 @@
         // PROJECT DATA
         const projects = {
             1: {
-                title: "🌍 Green Standards Dashboard",
-                subtitle: "Real-time monitoring system for 100+ schools across 10+ countries",
-                description: `
-                    <h3>📋 The Challenge</h3>
-                    <p>Aga Khan Schools network needed real-time tracking of sustainability metrics across 100+ geographically distributed schools in 10+ countries.</p>
-                    
-                    <h3>💡 The Solution</h3>
-                    <p>Built end-to-end web-based monitoring system featuring:</p>
-                    <ul>
-                        <li>Interactive Geospatial Map with Leaflet.js</li>
-                        <li>Real-time Analytics Dashboard with Chart.js</li>
-                        <li>8 Green Standards Compliance Tracking</li>
-                        <li>Multi-region Data Aggregation</li>
-                    </ul>
-                    
-                    <h3>📊 Impact Metrics</h3>
-                    <ul>
-                        <li>✅ 100+ Schools Deployed</li>
-                        <li>✅ 50,000+ Students Impacted</li>
-                        <li>✅ $750,000+ Cost Savings</li>
-                        <li>✅ 450,000+ kWh Renewable Energy Tracked</li>
-                        <li>✅ 225+ MT CO₂ Reduction</li>
-                    </ul>
-                    
-                    <h3>🛠️ Technology Stack</h3>
-                    <p><strong>Frontend:</strong> JavaScript, HTML5, CSS3</p>
-                    <p><strong>Visualization:</strong> Chart.js, Leaflet.js</p>
-                    <p><strong>Data:</strong> JSON, Real-time Sync</p>
-                `
-            },
-            2: {
                 title: "🦵 Biomechanical Ankle Analysis",
-                subtitle: "Research project analyzing postural control and ankle biomechanics",
+                subtitle: "M2 Research Project - Postural Control Analysis",
                 description: `
                     <h3>📚 Research Overview</h3>
                     <p><strong>Title:</strong> Biomechanical and Neuromuscular Analysis of the Ankle in Postural Control</p>
-                    <p><strong>Team:</strong> Saher Alreqeb & Samsaam Ali Baig</p>
-                    <p><strong>Supervisor:</strong> Laurent Tabourot</p>
+                    <p><strong>Context:</strong> M2 Collective Research | Polytech Annecy-Chambéry</p>
+                    <p><strong>Team:</strong> Saher Alreqeb & Samsaam Ali Baig | Supervisor: Laurent Tabourot</p>
+                    
+                    <h3>🎯 Research Objective</h3>
+                    <p>To model and validate the complex interaction between ankle biomechanics, neuromuscular signals, and postural stability using experimental data and computational models.</p>
                     
                     <h3>🔬 Methodology</h3>
-                    <p><strong>Stream 1:</strong> Data Acquisition (Kistler Force Plate, EMG, ArUco)</p>
-                    <p><strong>Stream 2:</strong> Biomechanical Model (MATLAB Simulink, Spring-Damper)</p>
-                    
-                    <h3>📊 Results</h3>
-                    <p>Model validation success with 100% alignment on key parameters:</p>
+                    <p><strong>Data Acquisition Stream:</strong></p>
                     <ul>
-                        <li>✅ Sway Frequency Match (0.40Hz)</li>
-                        <li>✅ Underdamped Behavior Confirmed</li>
-                        <li>✅ Stability Condition Validated</li>
-                        <li>✅ 18+ Model Iterations</li>
+                        <li>Kistler Force Plate (Center of Pressure)</li>
+                        <li>EMG Sensors (muscle activity)</li>
+                        <li>ArUco markers (kinematic tracking)</li>
+                        <li>Python + PyQt5 + OpenCV for real-time processing</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong>Biomechanical Modeling Stream:</strong></p>
+                    <ul>
+                        <li>Spring-damper system implementation</li>
+                        <li>MATLAB Simulink development (18+ iterations)</li>
+                        <li>Simscape multibody dynamics</li>
+                        <li>Parameter optimization</li>
                     </ul>
                     
-                    <h3>🛠️ Technology</h3>
+                    <h3>📊 Key Findings & Results</h3>
+                    <p style="background: #e8f5e9; padding: 15px; border-radius: 5px; margin: 15px 0;">
+                    <strong>Model Validation Success - 100% Alignment:</strong>
+                    </p>
+                    <ul>
+                        <li>✅ Sway Frequency Match (0.40Hz confirmed)</li>
+                        <li>✅ Underdamped Behavior (physiologically realistic)</li>
+                        <li>✅ Stability Condition (correctly predicted)</li>
+                        <li>✅ CoP-CoM Coupling (validated)</li>
+                        <li>✅ Damping Ratio (ζ = 0.5 confirmed)</li>
+                    </ul>
+                    
+                    <h3>💡 Key Equation</h3>
+                    <p style="background: #f0f7f4; padding: 15px; border-radius: 5px; font-family: monospace;">
+                    CoP - CoM = -(I/mgh) × θ̈<br>
+                    (Center of Pressure vs Center of Mass relationship)
+                    </p>
+                    
+                    <h3>🛠️ Technology Stack</h3>
                     <p><strong>Simulation:</strong> MATLAB, Simulink, Simscape</p>
-                    <p><strong>Data:</strong> Python, PyQt5, OpenCV</p>
-                    <p><strong>Analysis:</strong> Signal Processing, Control Theory</p>
+                    <p><strong>Data Processing:</strong> Python, PyQt5, OpenCV, Signal Processing</p>
+                    <p><strong>Analysis:</strong> Control Theory, Statistical Analysis, System Identification</p>
+                    
+                    <h3>🔮 Future Directions</h3>
+                    <ul>
+                        <li>Implement active neuromuscular control</li>
+                        <li>Multi-joint lower limb model</li>
+                        <li>Subject-specific parameter identification</li>
+                        <li>Real-time EMG feedback integration</li>
+                    </ul>
                 `
             },
-            3: {
+            2: {
                 title: "🤖 AI + MCP Engineering Automation",
-                subtitle: "Claude API integration with Model Context Protocol for engineering tools",
+                subtitle: "Claude API Integration with Model Context Protocol",
                 description: `
                     <h3>🎯 Project Vision</h3>
-                    <p>Build AI-powered automation system integrating Claude API with engineering tools (MATLAB, SolidWorks) through MCP servers.</p>
+                    <p>Build AI-powered automation system integrating Claude API with engineering tools (MATLAB, SolidWorks) through MCP servers, enabling engineers to delegate complex computational tasks to AI agents.</p>
                     
                     <h3>🏗️ System Architecture</h3>
                     <ul>
-                        <li><strong>Layer 1:</strong> Claude API - Natural language task processing</li>
-                        <li><strong>Layer 2:</strong> MCP Server (FastMCP) - Tool definitions</li>
-                        <li><strong>Layer 3:</strong> JSON-RPC Socket Layer - Messaging</li>
-                        <li><strong>Layer 4:</strong> Engineering Tools - MATLAB, SolidWorks</li>
+                        <li><strong>Layer 1 - API Interface:</strong> Claude API for natural language task processing</li>
+                        <li><strong>Layer 2 - MCP Server:</strong> FastMCP framework providing tool definitions and execution</li>
+                        <li><strong>Layer 3 - Socket Communication:</strong> JSON-RPC protocol for reliable bi-directional messaging</li>
+                        <li><strong>Layer 4 - Engineering Tools:</strong> MATLAB Engine, SolidWorks COM, CAD automation</li>
                     </ul>
                     
-                    <h3>💡 Features</h3>
+                    <h3>💡 Core Features</h3>
                     <ul>
                         <li>Natural language commands for engineering tasks</li>
-                        <li>Automated MATLAB simulations</li>
-                        <li>CAD model generation</li>
+                        <li>Automated MATLAB simulations and optimizations</li>
+                        <li>CAD model generation and modifications</li>
+                        <li>Batch processing of design variations</li>
                         <li>Error handling and validation</li>
+                        <li>Cross-platform tool orchestration</li>
+                    </ul>
+                    
+                    <h3>⚡ Use Cases</h3>
+                    <ul>
+                        <li>Automated MATLAB simulation workflows via English commands</li>
+                        <li>Parametric CAD design and optimization</li>
+                        <li>Engineering report generation with embedded simulations</li>
+                        <li>Design variation exploration</li>
+                        <li>Multi-tool project orchestration</li>
+                    </ul>
+                    
+                    <h3>🛠️ Technology Stack</h3>
+                    <p><strong>Backend:</strong> Python 3.9+, FastMCP, Socket.io</p>
+                    <p><strong>AI:</strong> Claude API (Sonnet 4), Anthropic SDK</p>
+                    <p><strong>Engineering Tools:</strong> MATLAB Engine API, SolidWorks COM, Simscape</p>
+                    <p><strong>Communication:</strong> JSON-RPC 2.0, WebSockets, REST API</p>
+                    <p><strong>Data:</strong> JSON, HDF5, MATLAB .mat files</p>
+                    
+                    <h3>📋 Current Status</h3>
+                    <p><strong>Phase:</strong> Active Development (Architecture & MCP Server Implementation)</p>
+                    <p><strong>Next Steps:</strong> MATLAB integration, SolidWorks connector, end-to-end testing</p>
+                `
+            },
+            3: {
+                title: "💊 Smart Pillbox IoT Device",
+                subtitle: "Connected Healthcare Solution with Real-time Alerts",
+                description: `
+                    <h3>🎯 Project Purpose</h3>
+                    <p>Connected medication management system designed to improve medication adherence through automated reminders, real-time WhatsApp notifications, and family caregiving support.</p>
+                    
+                    <h3>✨ Key Features</h3>
+                    <ul>
+                        <li>Automated medication reminders at scheduled times</li>
+                        <li>Real-time WhatsApp notifications to family members</li>
+                        <li>Medication compliance tracking and logging</li>
+                        <li>Web dashboard for monitoring and management</li>
+                        <li>Low-power wireless communication</li>
+                        <li>Emergency alerts for missed doses</li>
+                        <li>User activity tracking and history</li>
+                    </ul>
+                    
+                    <h3>🛠️ Technology Stack</h3>
+                    <p><strong>Hardware:</strong></p>
+                    <ul>
+                        <li>ESP32 Microcontroller</li>
+                        <li>WiFi/BLE Module</li>
+                        <li>Sensors & Actuators</li>
+                        <li>Power management system</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Firmware:</strong></p>
+                    <ul>
+                        <li>Arduino IDE</li>
+                        <li>MQTT Protocol</li>
+                        <li>Time synchronization (NTP)</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Backend:</strong></p>
+                    <ul>
+                        <li>Python Flask</li>
+                        <li>SQLite Database</li>
+                        <li>REST API</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Integration:</strong></p>
+                    <ul>
+                        <li>CallMeBot API (WhatsApp integration)</li>
+                        <li>Cloud services</li>
+                        <li>Mobile notifications</li>
+                    </ul>
+                    
+                    <h3>🏥 Healthcare Impact</h3>
+                    <ul>
+                        <li>Improves medication adherence in elderly care</li>
+                        <li>Reduces missed doses and associated health complications</li>
+                        <li>Enables remote family caregiving</li>
+                        <li>Scalable for smart home healthcare systems</li>
+                        <li>Reduces hospital readmissions</li>
                     </ul>
                     
                     <h3>📋 Status</h3>
-                    <p><strong>Current Phase:</strong> Active Development</p>
-                    <p><strong>Next Steps:</strong> MATLAB integration, SolidWorks connector</p>
+                    <p><strong>Phase:</strong> Active Development | <strong>Context:</strong> M2 Collective Project</p>
                 `
             },
             4: {
-                title: "🦾 ROS2 Autonomous Robot",
-                subtitle: "Team project with autonomous navigation and obstacle avoidance",
+                title: "💧 Water-in-Oil Emulsions Modeling",
+                subtitle: "COMSOL Multiphysics Simulation & CFD Analysis",
                 description: `
-                    <h3>🎯 Objectives</h3>
+                    <h3>📊 Project Overview</h3>
+                    <p><strong>Duration:</strong> Aug 2021 - Sep 2022</p>
+                    <p><strong>Context:</strong> Bachelor's Thesis Project - University of Engineering & Technology (UET) Peshawar</p>
+                    <p><strong>Objective:</strong> Computationally validate experimental water-oil separation using advanced CFD and multiphysics modeling.</p>
+                    
+                    <h3>🔬 Research Background</h3>
+                    <p>Experimental research demonstrated that Janus Graphene Oxide (JGO) sponge achieved exceptionally high purity in oil-water separation (99.2%). This project focused on computational validation of these experimental results using COMSOL Multiphysics.</p>
+                    
+                    <h3>🧮 Simulation Approach</h3>
+                    <p><strong>Four Different COMSOL Modules Used:</strong></p>
                     <ul>
-                        <li>Autonomous navigation in unknown environments</li>
-                        <li>Real-time obstacle detection and avoidance</li>
-                        <li>SLAM implementation</li>
-                        <li>Multi-sensor fusion</li>
+                        <li>Multiphase Flow Module (Two-Phase Flow)</li>
+                        <li>CFD Module (Computational Fluid Dynamics)</li>
+                        <li>Transport Module</li>
+                        <li>Coupling modules for multiphysics analysis</li>
                     </ul>
                     
-                    <h3>👥 Team</h3>
-                    <p><strong>Size:</strong> 8 Members</p>
-                    <p><strong>Context:</strong> M2 Advanced Mechatronics</p>
-                    
-                    <h3>🛠️ Technology Stack</h3>
-                    <p><strong>Software:</strong> ROS 2, C++, Python, OpenCV</p>
-                    <p><strong>Simulation:</strong> Gazebo, Nav2</p>
-                    <p><strong>Design:</strong> SolidWorks, SLAM Toolbox</p>
-                    
-                    <h3>🚀 Key Features</h3>
+                    <h3>🌊 Turbulence Modeling</h3>
+                    <p><strong>Eulerian-Eulerian Approach with SST k-ω Model:</strong></p>
                     <ul>
-                        <li>Path planning using A* and Dijkstra</li>
-                        <li>Real-time SLAM with map generation</li>
-                        <li>Dynamic obstacle avoidance</li>
-                        <li>Multi-sensor data fusion</li>
+                        <li>Shear-Stress Transport (SST) k-ω turbulence model</li>
+                        <li>Two-fluid Eulerian-Eulerian formulation</li>
+                        <li>Interfacial tension modeling</li>
+                        <li>Separation efficiency analysis</li>
+                    </ul>
+                    
+                    <h3>📈 Key Results</h3>
+                    <ul>
+                        <li>✅ Oil-in-water emulsion separation validated</li>
+                        <li>✅ Water-in-oil emulsion separation analyzed</li>
+                        <li>✅ 99.2% purity reproduced computationally</li>
+                        <li>✅ Parameter sensitivity analysis completed</li>
+                        <li>✅ Flow dynamics and separation mechanisms identified</li>
+                    </ul>
+                    
+                    <h3>💡 Applications</h3>
+                    <ul>
+                        <li>Oil-water separation technology optimization</li>
+                        <li>Industrial wastewater treatment</li>
+                        <li>Environmental remediation</li>
+                        <li>Petroleum industry applications</li>
+                    </ul>
+                    
+                    <h3>🛠️ Tools & Software</h3>
+                    <p><strong>COMSOL Multiphysics 5.x</strong> with:</p>
+                    <ul>
+                        <li>CFD Module</li>
+                        <li>Multiphase Flow capabilities</li>
+                        <li>Advanced mesh generation</li>
+                        <li>PostProcessing tools</li>
                     </ul>
                 `
             },
             5: {
-                title: "💊 Smart Pillbox IoT Device",
-                subtitle: "Connected healthcare solution with real-time alerts",
+                title: "⚙️ 3D Jet Turbine Modeling",
+                subtitle: "CAD Design & 3D Modeling Project",
                 description: `
-                    <h3>🎯 Purpose</h3>
-                    <p>Connected medication management system with automated reminders and WhatsApp notifications.</p>
+                    <h3>📐 Project Overview</h3>
+                    <p><strong>Duration:</strong> Aug - Sep 2021</p>
+                    <p><strong>Objective:</strong> Comprehensive 3D modeling and detailed design of a jet turbine engine</p>
+                    <p><strong>Software:</strong> PTC CREO (Professional CAD Suite)</p>
                     
-                    <h3>✨ Key Features</h3>
+                    <h3>🎨 Design Components</h3>
+                    <p>Complete modeling of jet turbine engine including:</p>
                     <ul>
-                        <li>Automated medication reminders</li>
-                        <li>Real-time WhatsApp notifications</li>
-                        <li>Medication compliance tracking</li>
-                        <li>Web dashboard for monitoring</li>
-                        <li>Emergency alerts for missed doses</li>
+                        <li>Air Intake Section</li>
+                        <li>Compressor Stage (Multiple blade rows)</li>
+                        <li>Combustion Chamber</li>
+                        <li>Turbine Section (Hot section)</li>
+                        <li>Exhaust Nozzle</li>
+                        <li>Rotor & Stator assemblies</li>
+                        <li>Bearing systems</li>
+                        <li>Mounting structures</li>
                     </ul>
                     
-                    <h3>🛠️ Technology Stack</h3>
-                    <p><strong>Hardware:</strong> ESP32 Microcontroller, WiFi/BLE</p>
-                    <p><strong>Firmware:</strong> Arduino IDE, MQTT Protocol</p>
-                    <p><strong>Backend:</strong> Python Flask, REST API</p>
-                    <p><strong>Integration:</strong> CallMeBot API, WhatsApp</p>
-                    
-                    <h3>💡 Healthcare Impact</h3>
+                    <h3>🛠️ Design Details</h3>
                     <ul>
-                        <li>Improves medication adherence in elderly care</li>
-                        <li>Reduces missed doses</li>
-                        <li>Enables family caregiving</li>
-                        <li>Scalable for smart home healthcare</li>
+                        <li>Detailed blade geometry and profiles</li>
+                        <li>Rotor/stator assembly relationships</li>
+                        <li>Clearance and tolerance specifications</li>
+                        <li>Internal cooling passages</li>
+                        <li>Sealing systems</li>
+                        <li>Support structures and casings</li>
+                    </ul>
+                    
+                    <h3>📋 Deliverables</h3>
+                    <ul>
+                        <li>Complete 3D assembly model</li>
+                        <li>Exploded view diagrams</li>
+                        <li>Technical drawings (2D)</li>
+                        <li>Bill of Materials (BOM)</li>
+                        <li>Component specifications</li>
+                    </ul>
+                    
+                    <h3>💡 Skills Applied</h3>
+                    <ul>
+                        <li>Advanced CAD modeling techniques</li>
+                        <li>Assembly design and management</li>
+                        <li>Mechanical component design</li>
+                        <li>Technical drawing creation</li>
+                        <li>Constraint and relationship management</li>
+                    </ul>
+                    
+                    <h3>🛠️ Software Features Used</h3>
+                    <p><strong>PTC CREO Capabilities:</strong></p>
+                    <ul>
+                        <li>Part design and modeling</li>
+                        <li>Assembly workbench</li>
+                        <li>Drawing generation</li>
+                        <li>Advanced sketching tools</li>
+                        <li>Surface modeling (complex curves)</li>
                     </ul>
                 `
             },
             6: {
-                title: "⚙️ Advanced Control Systems",
-                subtitle: "Multiple control theory implementations and system modeling",
+                title: "🦾 ROS2 Autonomous Robot",
+                subtitle: "Eurobot Competition - Autonomous Navigation System",
                 description: `
-                    <h3>📋 Projects Included</h3>
+                    <h3>🎯 Project Overview</h3>
+                    <p><strong>Team Size:</strong> 8 Members</p>
+                    <p><strong>Context:</strong> M2 Advanced Mechatronics Team Project</p>
+                    <p><strong>Objective:</strong> Develop complete autonomous robot with navigation, obstacle avoidance, and multi-sensor integration</p>
+                    
+                    <h3>🏆 Competition Goals</h3>
                     <ul>
-                        <li><strong>PID Control:</strong> Proportional-Integral-Derivative controllers</li>
-                        <li><strong>State-Space:</strong> Modern control theory implementation</li>
-                        <li><strong>System Dynamics:</strong> Transfer functions and modeling</li>
-                        <li><strong>Simulation:</strong> MATLAB/Simulink implementations</li>
+                        <li>Autonomous navigation in unknown environments</li>
+                        <li>Real-time obstacle detection and avoidance</li>
+                        <li>Efficient path planning and execution</li>
+                        <li>SLAM (Simultaneous Localization and Mapping) implementation</li>
+                        <li>Multi-sensor fusion and coordination</li>
                     </ul>
                     
-                    <h3>🛠️ Technology</h3>
-                    <p><strong>Software:</strong> MATLAB, Simulink, Control System Toolbox</p>
-                    <p><strong>Theory:</strong> Classical and Modern Control, System Analysis</p>
-                    
-                    <h3>📊 Applications</h3>
+                    <h3>🤖 Robot Capabilities</h3>
                     <ul>
-                        <li>Industrial process control</li>
-                        <li>Robot arm control</li>
-                        <li>Vehicle dynamics</li>
-                        <li>Power system stability</li>
+                        <li>Autonomous path planning (A*, Dijkstra algorithms)</li>
+                        <li>Real-time SLAM with map generation</li>
+                        <li>Dynamic obstacle avoidance</li>
+                        <li>Multi-sensor data fusion (LiDAR, Camera, IMU)</li>
+                        <li>Real-time decision making</li>
+                        <li>Failure recovery mechanisms</li>
                     </ul>
                     
-                    <h3>✅ Status</h3>
-                    <p>Complete - All projects successfully implemented and validated</p>
+                    <h3>🛠️ Technology Stack</h3>
+                    <p><strong>Middleware & Framework:</strong></p>
+                    <ul>
+                        <li>ROS 2 (Robot Operating System)</li>
+                        <li>Node-based architecture</li>
+                        <li>DDS middleware</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Programming:</strong></p>
+                    <ul>
+                        <li>C++ (core nodes)</li>
+                        <li>Python (utility scripts)</li>
+                        <li>YAML configuration</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Simulation & Development:</strong></p>
+                    <ul>
+                        <li>Gazebo 11 (Physics simulation)</li>
+                        <li>RViz (Visualization)</li>
+                        <li>Nav2 (Navigation framework)</li>
+                        <li>SLAM Toolbox</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>CAD & Design:</strong></p>
+                    <ul>
+                        <li>SolidWorks (Mechanical design)</li>
+                        <li>3D modeling and assembly</li>
+                        <li>Component specifications</li>
+                    </ul>
+                    
+                    <h3>📡 Sensor Integration</h3>
+                    <ul>
+                        <li>LiDAR (2D/3D point clouds)</li>
+                        <li>Camera (OpenCV processing)</li>
+                        <li>IMU (Inertial Measurement)</li>
+                        <li>Wheel odometry</li>
+                        <li>Encoder feedback</li>
+                    </ul>
+                    
+                    <h3>🧭 Navigation Stack</h3>
+                    <ul>
+                        <li>Path planning algorithms</li>
+                        <li>Local costmaps</li>
+                        <li>Global costmaps</li>
+                        <li>Behavior trees</li>
+                        <li>Recovery behaviors</li>
+                    </ul>
+                    
+                    <h3>👥 Team Responsibilities</h3>
+                    <ul>
+                        <li>Mechanical design & fabrication (2-3 members)</li>
+                        <li>ROS software development (2-3 members)</li>
+                        <li>Sensor integration & calibration (1-2 members)</li>
+                        <li>Simulation & testing (1 member)</li>
+                        <li>Project management & coordination</li>
+                    </ul>
+                `
+            },
+            7: {
+                title: "🏆 Eurobot Competition Project",
+                subtitle: "Complete Robot Development - Sep 2025 to Jan 2026",
+                description: `
+                    <h3>🎯 Project Overview</h3>
+                    <p><strong>Duration:</strong> Sep 2025 - Jan 2026 (Ongoing)</p>
+                    <p><strong>Status:</strong> 🔄 Active Development</p>
+                    <p><strong>Objective:</strong> Design and build a complete robot from scratch to compete in Eurobot Competition</p>
+                    
+                    <h3>🔨 Project Scope</h3>
+                    <p>Developing a full-featured autonomous robot including:</p>
+                    <ul>
+                        <li>Mechanical chassis and structure</li>
+                        <li>Motor systems and actuation</li>
+                        <li>Sensor suite integration</li>
+                        <li>Electronics and PCB design</li>
+                        <li>Control systems</li>
+                        <li>Software stack</li>
+                    </ul>
+                    
+                    <h3>🛠️ Development Areas</h3>
+                    <p><strong>CAD & Mechanical Design:</strong></p>
+                    <ul>
+                        <li>SolidWorks 3D modeling</li>
+                        <li>Assembly design & analysis</li>
+                        <li>Component sourcing</li>
+                        <li>FEM stress analysis</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Simulation & Validation:</strong></p>
+                    <ul>
+                        <li>Gazebo environment setup</li>
+                        <li>Virtual testing</li>
+                        <li>Algorithm validation</li>
+                        <li>Path planning verification</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Programming & Control:</strong></p>
+                    <ul>
+                        <li>ROS 2 nodes development</li>
+                        <li>C++ core algorithms</li>
+                        <li>Real-time control</li>
+                        <li>Sensor fusion</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Electronics & Fabrication:</strong></p>
+                    <ul>
+                        <li>PCB design</li>
+                        <li>Motor control circuits</li>
+                        <li>Power management</li>
+                        <li>Assembly integration</li>
+                    </ul>
+                    
+                    <h3>🎯 Competition Strategy</h3>
+                    <ul>
+                        <li>Modular design for flexibility</li>
+                        <li>Robust sensor integration</li>
+                        <li>Efficient path planning</li>
+                        <li>Fail-safe mechanisms</li>
+                        <li>Real-time decision making</li>
+                    </ul>
+                    
+                    <h3>📊 Key Milestones</h3>
+                    <ul>
+                        <li>✅ Initial design phase</li>
+                        <li>🔄 CAD modeling (in progress)</li>
+                        <li>🔄 Component procurement</li>
+                        <li>🔄 Simulation development</li>
+                        <li>⏳ Hardware assembly</li>
+                        <li>⏳ Integration & testing</li>
+                        <li>⏳ Final competition</li>
+                    </ul>
+                    
+                    <h3>🏅 Continuous Development</h3>
+                    <p>This project builds on previous ROS2 autonomous robot work and represents continuous evolution of robotics expertise and competition participation.</p>
                 `
             }
         };
