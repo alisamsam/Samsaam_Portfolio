@@ -17,7 +17,6 @@
 	width: 100%;
 	z-index: 10000;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0);
-	overflow: hidden;
 }
 
 /* Header shadow on scroll/hover */
@@ -26,79 +25,7 @@
 }
 
 /* ============================================
-   FALLING ENGINEER ICONS ANIMATION
-   ============================================ */
-
-/* Falling icons keyframes */
-@-webkit-keyframes falling-icons {
-	0% {
-		opacity: 1;
-		-webkit-transform: translateY(-2em) scale(1);
-	}
-	10% {
-		opacity: 1;
-	}
-	90% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-		-webkit-transform: translateY(10em) scale(0.5);
-	}
-}
-
-@-moz-keyframes falling-icons {
-	0% {
-		opacity: 1;
-		-moz-transform: translateY(-2em) scale(1);
-	}
-	10% {
-		opacity: 1;
-	}
-	90% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-		-moz-transform: translateY(10em) scale(0.5);
-	}
-}
-
-@keyframes falling-icons {
-	0% {
-		opacity: 1;
-		transform: translateY(-2em) scale(1);
-	}
-	10% {
-		opacity: 1;
-	}
-	90% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-		transform: translateY(10em) scale(0.5);
-	}
-}
-
-/* Icon rotation during fall */
-@-webkit-keyframes icon-rotate {
-	0% { -webkit-transform: translateY(-2em) rotateZ(0deg) scale(1); }
-	100% { -webkit-transform: translateY(10em) rotateZ(360deg) scale(0.5); }
-}
-
-@-moz-keyframes icon-rotate {
-	0% { -moz-transform: translateY(-2em) rotateZ(0deg) scale(1); }
-	100% { -moz-transform: translateY(10em) rotateZ(360deg) scale(0.5); }
-}
-
-@keyframes icon-rotate {
-	0% { transform: translateY(-2em) rotateZ(0deg) scale(1); }
-	100% { transform: translateY(10em) rotateZ(360deg) scale(0.5); }
-}
-
-/* ============================================
-   LANGUAGE SWITCHER HOVER EFFECTS
+   LANGUAGE SWITCHER HOVER EFFECTS (CLEAN)
    ============================================ */
 
 /* Language links in header nav */
@@ -125,30 +52,6 @@
 	transform: scale(1.1);
 }
 
-/* Falling icons container - appears on hover */
-#header nav a:not([href="#menu"]):hover::after {
-	content: '\1F4DA\1F4D6\1F9E0\270F\2699\1F4A1\1F52C\1F527 \1F4DA\1F4D6\1F9E0\270F\2699\1F4A1\1F52C\1F527';
-	position: fixed;
-	top: 3.5em;
-	left: 0;
-	width: 100%;
-	height: 15em;
-	pointer-events: none;
-	font-size: 1.8em;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: flex-start;
-	justify-content: space-around;
-	z-index: 1;
-}
-
-/* Individual falling icon animations */
-#header nav a:not([href="#menu"]):hover::after {
-	-webkit-animation: falling-icons 2.5s ease-in forwards;
-	-moz-animation: falling-icons 2.5s ease-in forwards;
-	animation: falling-icons 2.5s ease-in forwards;
-}
-
 /* Active/Current language indicator */
 #header nav a:not([href="#menu"]).active,
 #header nav a:not([href="#menu"]).current {
@@ -169,26 +72,142 @@
 	border-bottom-color: rgba(76, 92, 150, 1);
 }
 
-/* Pulse animation on click/active */
-@-webkit-keyframes flag-pulse {
-	0%, 100% { -webkit-transform: scale(1.1); }
-	50% { -webkit-transform: scale(1.2); }
+/* ============================================
+   FALLING ENGINEER ICONS - MENU SECTION
+   ============================================ */
+
+/* Falling icons keyframes */
+@-webkit-keyframes falling-engineer-icons {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateY(-30px) scale(1) rotateZ(0deg);
+	}
+	10% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(200px) scale(0.3) rotateZ(360deg);
+	}
 }
 
-@-moz-keyframes flag-pulse {
-	0%, 100% { -moz-transform: scale(1.1); }
-	50% { -moz-transform: scale(1.2); }
+@-moz-keyframes falling-engineer-icons {
+	0% {
+		opacity: 1;
+		-moz-transform: translateY(-30px) scale(1) rotateZ(0deg);
+	}
+	10% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		-moz-transform: translateY(200px) scale(0.3) rotateZ(360deg);
+	}
 }
 
-@keyframes flag-pulse {
-	0%, 100% { transform: scale(1.1); }
-	50% { transform: scale(1.2); }
+@keyframes falling-engineer-icons {
+	0% {
+		opacity: 1;
+		transform: translateY(-30px) scale(1) rotateZ(0deg);
+	}
+	10% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(200px) scale(0.3) rotateZ(360deg);
+	}
 }
 
-#header nav a:not([href="#menu"]):active {
-	-webkit-animation: flag-pulse 0.4s ease-in-out;
-	-moz-animation: flag-pulse 0.4s ease-in-out;
-	animation: flag-pulse 0.4s ease-in-out;
+/* Menu links - add falling icons on hover */
+#menu .links li a {
+	position: relative;
+	overflow: visible;
+}
+
+#menu .links li a:hover::before {
+	content: '📚 📖 🧠 ✏️ ⚙️ 💡 🔬 🔧 📚 📖 🧠 ✏️ ⚙️ 💡 🔬 🔧';
+	position: fixed;
+	top: -30px;
+	left: 5%;
+	right: 5%;
+	height: 300px;
+	pointer-events: none;
+	font-size: 2.5em;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	justify-content: space-around;
+	z-index: 5000;
+	word-spacing: 1em;
+	line-height: 1.5em;
+	-webkit-animation: falling-engineer-icons 3s ease-in forwards;
+	-moz-animation: falling-engineer-icons 3s ease-in forwards;
+	animation: falling-engineer-icons 3s ease-in forwards;
+}
+
+/* Staggered animation for multiple hovers */
+#menu .links li:nth-child(2) a:hover::before {
+	-webkit-animation-delay: 0.1s;
+	-moz-animation-delay: 0.1s;
+	animation-delay: 0.1s;
+}
+
+#menu .links li:nth-child(3) a:hover::before {
+	-webkit-animation-delay: 0.2s;
+	-moz-animation-delay: 0.2s;
+	animation-delay: 0.2s;
+}
+
+#menu .links li:nth-child(4) a:hover::before {
+	-webkit-animation-delay: 0.3s;
+	-moz-animation-delay: 0.3s;
+	animation-delay: 0.3s;
+}
+
+#menu .links li:nth-child(5) a:hover::before {
+	-webkit-animation-delay: 0.4s;
+	-moz-animation-delay: 0.4s;
+	animation-delay: 0.4s;
+}
+
+#menu .links li:nth-child(6) a:hover::before {
+	-webkit-animation-delay: 0.5s;
+	-moz-animation-delay: 0.5s;
+	animation-delay: 0.5s;
+}
+
+#menu .links li:nth-child(7) a:hover::before {
+	-webkit-animation-delay: 0.6s;
+	-moz-animation-delay: 0.6s;
+	animation-delay: 0.6s;
+}
+
+/* ============================================
+   MENU LINK HOVER EFFECTS
+   ============================================ */
+
+#menu .links li a {
+	-moz-transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+	-webkit-transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+	-ms-transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#menu .links li a:hover {
+	-moz-transform: translateX(10px);
+	-webkit-transform: translateX(10px);
+	-ms-transform: translateX(10px);
+	transform: translateX(10px);
 }
 
 /* ============================================
@@ -214,9 +233,9 @@
 		transform: scale(1.08);
 	}
 
-	#header nav a:not([href="#menu"]):hover::after {
-		font-size: 1.4em;
-		height: 12em;
+	#menu .links li a:hover::before {
+		font-size: 2em;
+		height: 250px;
 	}
 
 }
@@ -235,9 +254,9 @@
 		transform: scale(1.05);
 	}
 
-	#header nav a:not([href="#menu"]):hover::after {
-		font-size: 1.2em;
-		height: 10em;
+	#menu .links li a:hover::before {
+		font-size: 1.5em;
+		height: 200px;
 	}
 
 }
